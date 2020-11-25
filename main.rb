@@ -66,9 +66,9 @@ class Microverse
   end
 end
 # rubocop: enable Lint/SuppressedException
-# microverse = Microverse.new
-# microverse.login!
-# link = microverse.claim_project until link
+microverse = Microverse.new
+microverse.login!
+link = microverse.claim_project until link
 text = '<span font="24">You Got A Project!</span>'
 span = "--text '#{text}'"
 title = '--title="New Project!"'
