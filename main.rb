@@ -27,7 +27,7 @@ class Microverse
     click_input(:name, 'submit')
   end
 
-  def find_proyect
+  def find_project
     # Go to code review section / Refresh Page
     click_input(:link_text, 'Code Review Requests')
 
@@ -40,9 +40,9 @@ class Microverse
   rescue Selenium::WebDriver::Error::TimeoutError
   end
 
-  def claim_proyect
+  def claim_project
     # Nav to Code Reviews
-    link = find_proyect until link
+    link = find_project until link
     true
   rescue Selenium::WebDriver::Error::UnknownError
   end
@@ -68,8 +68,8 @@ end
 # rubocop: enable Lint/SuppressedException
 microverse = Microverse.new
 microverse.login!
-link = microverse.claim_proyect until link
-text = '<span font="24">You Got A Proyect!</span>'
+link = microverse.claim_project until link
+text = '<span font="24">You Got A Project!</span>'
 span = "--text '#{text}'"
 title = '--title="New Project!"'
 system("zenity --info #{span} #{title} --width=300 --height=100")
