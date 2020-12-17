@@ -73,3 +73,7 @@ text = '<span font="24">You Got A Project!</span>'
 span = "--text '#{text}'"
 title = '--title="New Project!"'
 system("zenity --info #{span} #{title} --width=300 --height=100")
+# frozen_string_literal: true
+
+ENV['GMAIL_USERNAME'] = 'd.laloush@outlook.com'
+ENV['GMAIL_PASSWORD'] = 'Dan17iel02!'
